@@ -95,7 +95,9 @@ module.exports = function(app) {
           reportedThread.reported = true;
           reportedThread.bumped_on = date;
           boardData.save((err, updatedData) => {
-            res.send("Success");
+            if (!err) {
+              res.send("Success");
+            }
           });
         }
       });
@@ -116,7 +118,9 @@ module.exports = function(app) {
             return;
           }
           boardData.save((err, updatedData) => {
-            res.send("Success");
+            if (!err) {
+              res.send("Success");
+            }
           });
         }
       });

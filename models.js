@@ -6,9 +6,9 @@ const date = new Date();
 const ReplySchema = new Schema({
   text: { type: String },
   delete_password: { type: String },
-  reported: { type: Boolean, default: false },
   created_on: { type: Date, default: date },
   bumped_on: { type: Date, default: date },
+  reported: { type: Boolean, default: false },
 });
 
 const ThreadSchema = new Schema({
